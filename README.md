@@ -23,20 +23,7 @@ Espace is a web based todo app service, that allows users to create todo lists u
 
 ## Introduction
 
-
 ## Features
-
-A few of the things you can do with Espace:
-
-* View user activity feed
-* Communicate on your issue and pull request conversations
-* Close or lock issues
-* Apply labels and assignees
-* Review and merge pull requests
-* Create new issues
-* Star, watch and fork repositories
-* Control your unread and participating notifications
-* Easily search for any user or repository
 
 ## Feedback
 

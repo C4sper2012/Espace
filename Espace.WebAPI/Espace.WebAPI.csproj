@@ -17,4 +17,8 @@
       <Folder Include="Controllers" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Espace.Service\Espace.Service.csproj" />
+    </ItemGroup>
+
 </Project>

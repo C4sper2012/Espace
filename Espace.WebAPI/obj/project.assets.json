@@ -274,6 +274,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Espace.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Espace.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Espace.Service.dll": {}
+        }
       }
     }
   },
@@ -738,10 +748,16 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Espace.Service/1.0.0": {
+      "type": "project",
+      "path": "../Espace.Service/Espace.Service.csproj",
+      "msbuildProject": "../Espace.Service/Espace.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Espace.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore.InMemory >= 6.0.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -771,7 +787,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\RiderProjects\\Espace\\Espace.Service\\Espace.Service.csproj": {
+              "projectPath": "C:\\Users\\Admin\\RiderProjects\\Espace\\Espace.Service\\Espace.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Espace.WebAPI\Espace.WebAPI.csproj" />
+    </ItemGroup>
+
 </Project>

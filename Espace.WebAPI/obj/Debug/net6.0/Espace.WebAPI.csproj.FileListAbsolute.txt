@@ -6,6 +6,10 @@ C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Espace.WebAPI
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Espace.WebAPI.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\ref\Espace.WebAPI.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Espace.WebAPI.pdb
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -25,7 +29,5 @@ C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\obj\Debug\net6.0\Espace.WebAPI
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\obj\Debug\net6.0\ref\Espace.WebAPI.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\obj\Debug\net6.0\Espace.WebAPI.pdb
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\obj\Debug\net6.0\Espace.WebAPI.genruntimeconfig.cache
-C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Espace.Service.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Espace.Service.pdb

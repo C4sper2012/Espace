@@ -1,25 +1,30 @@
+using Espace;
+using Espace.Service.Shared.Models;
+using Espace.WebAPI;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TodoDb>(opt => opt.UseInMemoryDatabase("TodoList"));
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
 //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-var app = builder.Build();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+WebApplication app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.MapGet("/", () => "Hello World!");
-
-app.MapGet("/todoitems", async (TodoDb db) =>
+app.MapGet("/todoitems", async (TodoContext db) =>
     await db.Todos.ToListAsync());
 
-app.MapGet("/todoitems/complete", async (TodoDb db) =>
-    await db.Todos.Where(t => t.IsComplete).ToListAsync());
+app.MapGet("/todoitems/complete", async (TodoContext db) =>
+    await db.Todos.Where(t => t.Completed).ToListAsync());
 
-app.MapGet("/todoitems/{id}", async (int id, TodoDb db) =>
+app.MapGet("/todoitems/{id}", async (int id, TodoContext db) =>
     await db.Todos.FindAsync(id)
-        is Todo todo
+        is TodoItem todo
         ? Results.Ok(todo)
         : Results.NotFound());
 
-app.MapPost("/todoitems", async (Todo todo, TodoDb db) =>
+app.MapPost("/todoitems", async (TodoItem todo, TodoContext db) =>
 {
     db.Todos.Add(todo);
     await db.SaveChangesAsync();
@@ -27,23 +32,23 @@ app.MapPost("/todoitems", async (Todo todo, TodoDb db) =>
     return Results.Created($"/todoitems/{todo.Id}", todo);
 });
 
-app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
+app.MapPut("/todoitems/{id}", async (int id, TodoItem inputTodo, TodoContext db) =>
 {
-    var todo = await db.Todos.FindAsync(id);
+    TodoItem? todo = await db.Todos.FindAsync(id);
 
     if (todo is null) return Results.NotFound();
 
-    todo.Name = inputTodo.Name;
-    todo.IsComplete = inputTodo.IsComplete;
+    todo.Description = inputTodo.Description;
+    todo.Completed = inputTodo.Completed;
 
     await db.SaveChangesAsync();
 
     return Results.NoContent();
 });
 
-app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
+app.MapDelete("/todoitems/{id}", async (int id, TodoContext db) =>
 {
-    if (await db.Todos.FindAsync(id) is Todo todo)
+    if (await db.Todos.FindAsync(id) is TodoItem todo)
     {
         db.Todos.Remove(todo);
         await db.SaveChangesAsync();
@@ -54,18 +59,3 @@ app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
 });
 
 app.Run();
-
-class Todo
-{
-    public int Id { get; set; }
-    public string? Name { get; set; }
-    public bool IsComplete { get; set; }
-}
-
-class TodoDb : DbContext
-{
-    public TodoDb(DbContextOptions<TodoDb> options)
-        : base(options) { }
-
-    public DbSet<Todo> Todos => Set<Todo>();
-}

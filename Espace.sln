@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espace.Service", "Espace.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espace.Client", "Espace.Client\Espace.Client.csproj", "{64751804-043C-433B-BD38-7695A6F6C56C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espace.TodoTests", "Espace.TodoTests\Espace.TodoTests.csproj", "{4DB82AD2-D469-423D-A30F-336C5222B64D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espace.RazorPage", "Espace.RazorPage\Espace.RazorPage.csproj", "{BA6CDF28-4671-4DA4-89E7-65EFFCF0D358}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{64751804-043C-433B-BD38-7695A6F6C56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64751804-043C-433B-BD38-7695A6F6C56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64751804-043C-433B-BD38-7695A6F6C56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB82AD2-D469-423D-A30F-336C5222B64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB82AD2-D469-423D-A30F-336C5222B64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB82AD2-D469-423D-A30F-336C5222B64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB82AD2-D469-423D-A30F-336C5222B64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6CDF28-4671-4DA4-89E7-65EFFCF0D358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6CDF28-4671-4DA4-89E7-65EFFCF0D358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6CDF28-4671-4DA4-89E7-65EFFCF0D358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6CDF28-4671-4DA4-89E7-65EFFCF0D358}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,13 +2,14 @@
 @model Espace.RazorPage.Pages.EditModel
 
 @{
-    
+
 }
+<h1>Editing @Model.TodoItem.Id</h1>
 
 <form method="post">
-    <input asp-for="TodoItem.Id" type="hidden"/>
-    <input asp-for="TodoItem.Title"/>
-    <input asp-for="TodoItem.Description"/>
-    <input asp-for="TodoItem.Priority"/>
+    <input class="form-control w-50 mb-1" asp-for="TodoItem.Id" type="hidden"/>
+    <input class="form-control w-50 mb-1" asp-for="TodoItem.Title"/>
+    <input class="form-control w-50 mb-1" asp-for="TodoItem.Description"/>
+    <input class="form-control w-50 mb-1" asp-for="TodoItem.Priority"/>
     <button type="submit" class="btn btn-success">Update</button>
 </form>

@@ -1,0 +1,9 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@foreach (var item in Model.TodoItems)
+{
+    <p>@item.Completed</p>     
+}   

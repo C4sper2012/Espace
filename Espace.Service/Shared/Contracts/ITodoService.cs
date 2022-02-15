@@ -7,7 +7,7 @@ namespace Espace.Service.Shared.Contracts
         Task<List<TodoItem>> GetItemsAsync();
         Task<TodoItem> GetItemByIdAsync(int id);
         Task<TodoItem> CreateAsync(TodoItem todoItem);
-        Task Update(int id, TodoItem todoItem);
+        Task Update(TodoItem todoItem);
         Task Delete(int id);
     }
 }

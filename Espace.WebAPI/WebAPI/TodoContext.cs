@@ -8,6 +8,12 @@ namespace Espace.WebAPI
         public TodoContext(DbContextOptions<TodoContext> options)
             : base(options) { }
 
+        public TodoContext()
+        {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
+        }
+        
         public DbSet<TodoItem> Todos => Set<TodoItem>();
     }
 }

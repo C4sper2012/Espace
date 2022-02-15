@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Debug.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVidWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Error.cshtml]
@@ -29,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Shared/_AddOrEditpartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZGRPckVkaXRwYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/RiderProjects/Espace/Espace.RazorPage/Pages/Shared/_ValidationScriptsPartial.cshtml]

@@ -1,0 +1,13 @@
+﻿@page
+@model Espace.RazorPage.Pages.CreateModel
+
+@{
+    
+}
+
+<form method="post">
+    <input asp-for="TodoItem.Title"/>
+    <input asp-for="TodoItem.Description"/>
+    <input asp-for="TodoItem.Priority"/>
+    <button type="submit" class="btn btn-success">Create</button>
+</form>

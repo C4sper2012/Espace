@@ -1,10 +1,11 @@
-using Espace;
 using Espace.Service.Shared.Models;
-using Espace.WebAPI;
 using Microsoft.EntityFrameworkCore;
+using TodoContext = Espace.WebAPI.TodoContext;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+builder.Services.AddDbContext<TodoContext>(opt => opt.UseSqlServer( @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TodoDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+builder.Services.AddScoped<DbContext, DbContext>();
+
 //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -38,6 +39,7 @@ app.MapPut("/todoitems/{id}", async (int id, TodoItem inputTodo, TodoContext db)
 
     if (todo is null) return Results.NotFound();
 
+    todo.Title = inputTodo.Title;
     todo.Description = inputTodo.Description;
     todo.Completed = inputTodo.Completed;
 

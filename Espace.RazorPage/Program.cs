@@ -2,9 +2,9 @@ using Espace.Service.Shared.Contracts;
 using Espace.Service.Shared.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient<ITodoService, TodoService>();
 builder.Services.AddScoped<ITodoService, TodoService>();
 
 var app = builder.Build();

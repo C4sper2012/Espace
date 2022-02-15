@@ -8,19 +8,21 @@ namespace Espace.Service.Shared.Services
 {
     public class TodoService : ITodoService
     {
-        private static readonly HttpClient _httpClient = new HttpClient
-            {BaseAddress = new Uri(AppConstants.BaseUrl.GetStringValue())};
+        private readonly IHttpClientFactory _httpClientFactory;
 
         private readonly JsonSerializerOptions _options;
-
-        public TodoService()
+        
+        public TodoService(IHttpClientFactory httpClientFactory)
         {
+            _httpClientFactory = httpClientFactory;
             _options = new JsonSerializerOptions {PropertyNameCaseInsensitive = true};
         }
 
         public async Task<List<TodoItem>> GetItemsAsync()
         {
-            string content = await _httpClient.GetStringAsync(AppConstants.WebAPI.GetStringValue());
+            HttpClient client = _httpClientFactory.CreateClient();
+            
+            string content = await client.GetStringAsync(AppConstants.WebAPI.GetStringValue());
             List<TodoItem> todoItems = JsonSerializer.Deserialize<List<TodoItem>>(content, _options);
 
             return todoItems;
@@ -28,33 +30,41 @@ namespace Espace.Service.Shared.Services
 
         public async Task<TodoItem> GetItemByIdAsync(int id)
         {
-            string content = await _httpClient.GetStringAsync($"{AppConstants.WebAPI.GetStringValue()}/{id}");
+            HttpClient client = _httpClientFactory.CreateClient();
+
+            string content = await client.GetStringAsync($"{AppConstants.WebAPI.GetStringValue()}/{id}");
             TodoItem todoItem = JsonSerializer.Deserialize<TodoItem>(content, _options);
             return todoItem;
         }
 
         public async Task<TodoItem> CreateAsync(TodoItem todoItem)
         {
+            HttpClient client = _httpClientFactory.CreateClient();
+
             string todoJson = JsonSerializer.Serialize(todoItem);
             StringContent requestContent = new StringContent(todoJson, Encoding.UTF8, "application/json");
-            var response = await _httpClient.PostAsync(AppConstants.WebAPI.GetStringValue(), requestContent);
+            var response = await client.PostAsync(AppConstants.WebAPI.GetStringValue(), requestContent);
             response.EnsureSuccessStatusCode();
             string content = await response.Content.ReadAsStringAsync();
             TodoItem createdTodoItem = JsonSerializer.Deserialize<TodoItem>(content, _options);
             return createdTodoItem;
         }
 
-        public async Task Update(int id, TodoItem todoItem)
+        public async Task Update(TodoItem todoItem)
         {
+            HttpClient client = _httpClientFactory.CreateClient();
+
             var todoJson = JsonSerializer.Serialize(todoItem);
             StringContent requestContent = new StringContent(todoJson, Encoding.UTF8, "application/json");
-            var response = await _httpClient.PutAsync($"{AppConstants.WebAPI.GetStringValue()}/{id}", requestContent);
+            var response = await client.PutAsync($"{AppConstants.WebAPI.GetStringValue()}/{todoItem.Id}", requestContent);
             response.EnsureSuccessStatusCode();
         }
 
         public async Task Delete(int id)
         {
-            var response = await _httpClient.DeleteAsync($"{AppConstants.WebAPI.GetStringValue()}/{id}");
+            HttpClient client = _httpClientFactory.CreateClient();
+
+            var response = await client.DeleteAsync($"{AppConstants.WebAPI.GetStringValue()}/{id}");
             response.EnsureSuccessStatusCode();
         }
     }

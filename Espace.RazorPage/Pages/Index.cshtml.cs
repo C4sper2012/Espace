@@ -9,7 +9,7 @@ namespace Espace.RazorPage.Pages
     {
         #region Fields
 
-        private ITodoService _service;
+        private readonly ITodoService _service;
         private readonly ILogger<IndexModel> _logger;
 
         #endregion
@@ -25,9 +25,15 @@ namespace Espace.RazorPage.Pages
         }
 
         // ReSharper disable once UnusedMember.Global
-        public async Task<IActionResult> OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
             TodoItems = await _service.GetItemsAsync();
+            return Page();
+        }
+        
+        public async Task<IActionResult> OnGetDeleteAsync(int id)
+        {
+            await _service.Delete(id);
             return Page();
         }
     }

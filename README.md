@@ -5,8 +5,6 @@
 
 <p align="center">
 Espace is a web based todo app service, that allows users to create todo lists using a web api
-<br>
-<a href="#disclaimer">DISCLAIMER</a>
 </p>
 
 
@@ -18,7 +16,7 @@ Espace is a web based todo app service, that allows users to create todo lists u
 - [Contributors](#contributors)
 - [Build Process](#build-process)
 - [Acknowledgments](#acknowledgments)
-
+- [Disclaimer](#disclaimer)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
@@ -52,5 +50,5 @@ Espace is a web based todo app service, that allows users to create todo lists u
 
 ## Disclaimer
 
-This project is purely for education purposes. I state again, i am not profiting from this nor have i plans to profit from it.
+This project is purely for education purposes. I am not profiting from this nor have i plans to profit from it.
 

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Espace.WebAPI/1.0.0": {
         "dependencies": {
+          "Auth0.AspNetCore.Authentication": "1.0.1",
           "Espace.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.2",
           "Microsoft.EntityFrameworkCore.Design": "6.0.2",
@@ -20,11 +21,34 @@
           "Espace.WebAPI.dll": {}
         }
       },
+      "Auth0.AspNetCore.Authentication/1.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.5",
+          "System.Text.Encodings.Web": "4.5.1"
+        },
+        "runtime": {
+          "lib/net5.0/Auth0.AspNetCore.Authentication.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect/5.0.5": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.8.0"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+            "assemblyVersion": "5.0.5.0",
+            "fileVersion": "5.0.521.16708"
           }
         }
       },
@@ -484,6 +508,7 @@
           "Microsoft.NETCore.Platforms": "3.1.0"
         }
       },
+      "System.Text.Encodings.Web/4.5.1": {},
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
@@ -519,12 +544,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Auth0.AspNetCore.Authentication/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XTlNnl3hCj3/N0xFu21M+DKMmnxnsJgjfRD+Caw85Tq3jVtFXd7wyjVuo4ZMKT0twZvgNOVy6Vjb2JU1L8aWrg==",
+      "path": "auth0.aspnetcore.authentication/1.0.1",
+      "hashPath": "auth0.aspnetcore.authentication.1.0.1.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.OpenIdConnect/5.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5HD/HcFjLwSmGAoIBSnnzH27/7krvu2N6DadtBZdfU4e9QAMAw+SVMney1VRv8Ie6TXTKWxcDreEMmgB70NM/g==",
+      "path": "microsoft.aspnetcore.authentication.openidconnect/5.0.5",
+      "hashPath": "microsoft.aspnetcore.authentication.openidconnect.5.0.5.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -868,6 +907,13 @@
       "sha512": "sha512-aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
       "path": "system.text.encoding.codepages/4.7.0",
       "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8lfETN/1lu0QD+XQaDCxn6InX3KYJHCFO6Iqrm92zn9eOEeonTuyisKxW0nLZfse598LibhEItiRdPzVn8Beyg==",
+      "path": "system.text.encodings.web/4.5.1",
+      "hashPath": "system.text.encodings.web.4.5.1.nupkg.sha512"
     },
     "System.Windows.Extensions/4.7.0": {
       "type": "package",

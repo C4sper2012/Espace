@@ -1,16 +1,25 @@
 ﻿@page
+@using Espace.Service.Shared.Models
 @model Espace.RazorPage.Pages.CreateModel
 
 @{
-    
+
 }
 
-<h1>Editing @Model.TodoItem.Id</h1>
+<h1>Create a new todo</h1>
 
 <form method="post">
     <input class="form-control w-50 mb-1" asp-for="TodoItem.Id" type="hidden"/>
+    <label asp-for="TodoItem.Title"></label>
     <input class="form-control w-50 mb-1" asp-for="TodoItem.Title"/>
+    <span asp-validation-for="TodoItem.Title" class="text-danger"></span>
+    <label asp-for="TodoItem.Description"></label>
     <input class="form-control w-50 mb-1" asp-for="TodoItem.Description"/>
-    <input class="form-control w-50 mb-1" asp-for="TodoItem.Priority"/>
-    <button type="submit" class="btn btn-success">Update</button>
+    <span asp-validation-for="TodoItem.Description" class="text-danger"></span>
+    <label asp-for="TodoItem.Priority"></label>
+    @Html.DropDownListFor(x => x.TodoItem.Priority, Html.GetEnumSelectList(typeof(PriorityLevel)),
+        new {@class = "form-control dropdown-toggle w-25 mb-2"})
+    <span asp-validation-for="TodoItem.Priority" class="text-danger"></span>
+
+    <button type="submit" class="btn btn-success">Create</button>
 </form>

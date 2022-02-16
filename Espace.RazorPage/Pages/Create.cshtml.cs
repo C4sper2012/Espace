@@ -20,8 +20,13 @@ namespace Espace.RazorPage.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            await _service.CreateAsync(TodoItem);
-            return RedirectToPage(AppConstants.BaseUrl);
+            if (ModelState.IsValid)
+            {
+                await _service.CreateAsync(TodoItem);
+                return RedirectToPage(AppConstants.BaseUrl);
+            }
+
+            return Page();
         }
     }
 }

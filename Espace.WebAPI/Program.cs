@@ -1,17 +1,29 @@
+using Auth0.AspNetCore.Authentication;
 using Espace.Service.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using TodoContext = Espace.WebAPI.TodoContext;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TodoContext>(opt => opt.UseSqlServer( @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TodoDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+
+#region SERVICES
+
+builder.Services.AddDbContext<TodoContext>(opt =>
+    opt.UseSqlServer(
+        @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TodoDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
+
 builder.Services.AddScoped<DbContext, DbContext>();
 
-//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+#endregion
+
 WebApplication app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+
+#region API ENDPOINTS
 
 app.MapGet("/todoitems", async (TodoContext db) =>
     await db.Todos.ToListAsync());
@@ -59,5 +71,8 @@ app.MapDelete("/todoitems/{id}", async (int id, TodoContext db) =>
 
     return Results.NotFound();
 });
+
+#endregion
+
 
 app.Run();

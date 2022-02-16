@@ -28,6 +28,26 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-page="/Debug">Debug</a>
                     </li>
+
+
+                </ul>
+                <ul class="navbar-nav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" asp-page="/Account/Details">@User.Identity.Name</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-page="/Account/Logout">Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Account/Login">Login</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

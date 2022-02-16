@@ -27,3 +27,11 @@ C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\obj\Debug\net6.0\Espace.Raz
 C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Espace.Service.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Espace.Service.pdb
 C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\obj\Debug\net6.0\Espace.RazorPage.csproj.CopyComplete
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Auth0.AspNetCore.Authentication.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.RazorPage\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

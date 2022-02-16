@@ -64,3 +64,4 @@ C:\Users\Admin\RiderProjects\Espace\Espace.Webapi\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.Webapi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Auth0.AspNetCore.Authentication.dll
 C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Admin\RiderProjects\Espace\Espace.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -54,10 +54,10 @@ This project is purely for education purposes. I am not profiting from this nor 
 
 - [x] En Index forside (der kan fortælle lidt om projektet - og som altid vil tillade anonym adgang)
 - [x] En TodoItems side der viser alle TodoItems , der ikke er udført
-- [ ] Klikker man på et TodoItems Description, åbnes emnet på en ny Page. Her er mulighed for at redigere Description, Completed og Priority. Der er lavet validering af brugerdata. 
+- [x] Klikker man på et TodoItems Description, åbnes emnet på en ny Page. Her er mulighed for at redigere Description, Completed og Priority. Der er lavet validering af brugerdata. 
 - [x] Desuden skal man kunne slette emnet og der skal gerne kræves en godkendelse inden emnet slettes.
 - [x] På forsiden skal der være en mulighed for at oprette et nyt TodoItem. Der er lavet validering af brugerdata. Som en ekstra option kan man lave formen som en Modal form.
-- [ ] Når man klikker på et TodoItems Checkbox for at markere at et TodoItem er udført, fjernes emnet fra forsiden (SoftDelete). Tip: Named PageHandlers
+- [x] Når man klikker på et TodoItems Checkbox for at markere at et TodoItem er udført, fjernes emnet fra forsiden (SoftDelete). Tip: Named PageHandlers
 - [x] Der er lavet en TodoService, som injectes med DI
 - [x] Applikationenens konstanter, som f.eks. URL's og andet er angivet i en AppConstants klasse
 - [x] Der laves en ReadMe til projektet, der bl.a. markerer hvilke krav der er opfyldt
